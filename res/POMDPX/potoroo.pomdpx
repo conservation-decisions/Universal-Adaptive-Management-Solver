@@ -1,0 +1,2556 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<pomdpx version ="1.0" id="sample" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="pomdpx.xsd">
+
+<Description>hmMDP model</Description>
+
+<Discount>0.9</Discount>
+
+<Variable>
+
+<StateVar vnamePrev="species_0" vnameCurr="species_1" fullyObs="true">
+<ValueEnum>state1 state2</ValueEnum>
+</StateVar>
+
+<StateVar vnamePrev="hidden_0" vnameCurr="hidden_1" fullyObs="false">
+<ValueEnum>mod1 mod2 mod3 mod4 mod5 mod6 mod7 mod8 mod9 mod10 mod11 mod12 mod13 mod14 mod15 mod16 mod17 mod18 mod19 mod20 mod21 mod22 mod23 mod24 mod25 mod26 mod27 mod28 mod29 mod30 mod31 mod32 mod33 mod34 mod35 mod36</ValueEnum>
+</StateVar>
+
+<ActionVar vname="action_control">
+<ValueEnum>action1 action2 action3 action4</ValueEnum>
+</ActionVar>
+
+<ObsVar vname="obs">
+<ValueEnum>o</ValueEnum>
+</ObsVar>
+
+ <RewardVar vname="reward_agent" />
+</Variable>
+
+<InitialStateBelief>
+
+<CondProb>
+<Var>species_0</Var>
+<Parent>null</Parent>
+<Parameter type="TBL">
+<Entry>
+<Instance> - </Instance>
+<ProbTable>1 0</ProbTable>
+</Entry>
+</Parameter>
+</CondProb>
+
+<CondProb>
+<Var>hidden_0</Var>
+<Parent>null</Parent>
+<Parameter type="TBL">
+<Entry>
+<Instance> - </Instance>
+<ProbTable>0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778 0.0277777777777778</ProbTable>
+</Entry>
+</Parameter>
+</CondProb>
+
+</InitialStateBelief>
+
+
+<StateTransitionFunction>
+
+  <CondProb>
+ <Var>species_1</Var>
+ <Parent>action_control hidden_0 species_0</Parent>
+ <Parameter type="TBL">
+  <Entry>
+ <Instance> action1 mod1 state1 state1  </Instance>
+ <ProbTable> 0.681281679534217 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod1 state1 state2  </Instance>
+ <ProbTable> 0.318718320465783 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod1 state2 state1  </Instance>
+ <ProbTable> 0.688906180112986 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod1 state2 state2  </Instance>
+ <ProbTable> 0.311093819887014 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod1 state1 state1  </Instance>
+ <ProbTable> 0.629399489875451 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod1 state1 state2  </Instance>
+ <ProbTable> 0.370600510124549 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod1 state2 state1  </Instance>
+ <ProbTable> 0.616970031331975 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod1 state2 state2  </Instance>
+ <ProbTable> 0.383029968668025 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod1 state1 state1  </Instance>
+ <ProbTable> 0.65163181817 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod1 state1 state2  </Instance>
+ <ProbTable> 0.34836818183 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod1 state2 state1  </Instance>
+ <ProbTable> 0.606508230852963 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod1 state2 state2  </Instance>
+ <ProbTable> 0.393491769147037 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod1 state1 state1  </Instance>
+ <ProbTable> 0.614308190378701 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod1 state1 state2  </Instance>
+ <ProbTable> 0.385691809621299 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod1 state2 state1  </Instance>
+ <ProbTable> 0.607771272776739 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod1 state2 state2  </Instance>
+ <ProbTable> 0.392228727223261 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod2 state1 state1  </Instance>
+ <ProbTable> 0.627527438124611 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod2 state1 state2  </Instance>
+ <ProbTable> 0.372472561875389 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod2 state2 state1  </Instance>
+ <ProbTable> 0.600319724209474 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod2 state2 state2  </Instance>
+ <ProbTable> 0.399680275790526 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod2 state1 state1  </Instance>
+ <ProbTable> 0.626370834545174 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod2 state1 state2  </Instance>
+ <ProbTable> 0.373629165454826 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod2 state2 state1  </Instance>
+ <ProbTable> 0.155393373532899 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod2 state2 state2  </Instance>
+ <ProbTable> 0.844606626467101 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod2 state1 state1  </Instance>
+ <ProbTable> 0.587752063959354 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod2 state1 state2  </Instance>
+ <ProbTable> 0.412247936040646 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod2 state2 state1  </Instance>
+ <ProbTable> 0.565613630757702 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod2 state2 state2  </Instance>
+ <ProbTable> 0.434386369242298 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod2 state1 state1  </Instance>
+ <ProbTable> 0.580628985394899 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod2 state1 state2  </Instance>
+ <ProbTable> 0.419371014605101 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod2 state2 state1  </Instance>
+ <ProbTable> 0.545024231222369 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod2 state2 state2  </Instance>
+ <ProbTable> 0.454975768777631 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod3 state1 state1  </Instance>
+ <ProbTable> 0.626402526765644 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod3 state1 state2  </Instance>
+ <ProbTable> 0.373597473234356 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod3 state2 state1  </Instance>
+ <ProbTable> 0.623220841199899 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod3 state2 state2  </Instance>
+ <ProbTable> 0.376779158800101 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod3 state1 state1  </Instance>
+ <ProbTable> 0.609310981276872 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod3 state1 state2  </Instance>
+ <ProbTable> 0.390689018723128 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod3 state2 state1  </Instance>
+ <ProbTable> 0.180347867041812 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod3 state2 state2  </Instance>
+ <ProbTable> 0.819652132958188 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod3 state1 state1  </Instance>
+ <ProbTable> 0.139386843225664 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod3 state1 state2  </Instance>
+ <ProbTable> 0.860613156774336 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod3 state2 state1  </Instance>
+ <ProbTable> 0.558825191626441 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod3 state2 state2  </Instance>
+ <ProbTable> 0.441174808373559 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod3 state1 state1  </Instance>
+ <ProbTable> 0.558228785831592 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod3 state1 state2  </Instance>
+ <ProbTable> 0.441771214168408 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod3 state2 state1  </Instance>
+ <ProbTable> 0.551373078642634 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod3 state2 state2  </Instance>
+ <ProbTable> 0.448626921357366 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod4 state1 state1  </Instance>
+ <ProbTable> 0.656072515850708 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod4 state1 state2  </Instance>
+ <ProbTable> 0.343927484149292 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod4 state2 state1  </Instance>
+ <ProbTable> 0.61671385672055 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod4 state2 state2  </Instance>
+ <ProbTable> 0.38328614327945 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod4 state1 state1  </Instance>
+ <ProbTable> 0.629509218497213 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod4 state1 state2  </Instance>
+ <ProbTable> 0.370490781502787 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod4 state2 state1  </Instance>
+ <ProbTable> 0.60107369267404 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod4 state2 state2  </Instance>
+ <ProbTable> 0.39892630732596 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod4 state1 state1  </Instance>
+ <ProbTable> 0.596689908036092 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod4 state1 state2  </Instance>
+ <ProbTable> 0.403310091963908 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod4 state2 state1  </Instance>
+ <ProbTable> 0.141998203595386 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod4 state2 state2  </Instance>
+ <ProbTable> 0.858001796404614 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod4 state1 state1  </Instance>
+ <ProbTable> 0.582956599598628 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod4 state1 state2  </Instance>
+ <ProbTable> 0.417043400401372 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod4 state2 state1  </Instance>
+ <ProbTable> 0.546707766088741 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod4 state2 state2  </Instance>
+ <ProbTable> 0.453292233911259 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod5 state1 state1  </Instance>
+ <ProbTable> 0.644635637009369 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod5 state1 state2  </Instance>
+ <ProbTable> 0.355364362990631 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod5 state2 state1  </Instance>
+ <ProbTable> 0.656686998478291 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod5 state2 state2  </Instance>
+ <ProbTable> 0.343313001521709 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod5 state1 state1  </Instance>
+ <ProbTable> 0.58947271486014 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod5 state1 state2  </Instance>
+ <ProbTable> 0.41052728513986 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod5 state2 state1  </Instance>
+ <ProbTable> 0.595214330819067 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod5 state2 state2  </Instance>
+ <ProbTable> 0.404785669180933 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod5 state1 state1  </Instance>
+ <ProbTable> 0.147853711444094 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod5 state1 state2  </Instance>
+ <ProbTable> 0.852146288555906 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod5 state2 state1  </Instance>
+ <ProbTable> 0.141214203156477 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod5 state2 state2  </Instance>
+ <ProbTable> 0.858785796843523 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod5 state1 state1  </Instance>
+ <ProbTable> 0.553178816357889 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod5 state1 state2  </Instance>
+ <ProbTable> 0.446821183642111 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod5 state2 state1  </Instance>
+ <ProbTable> 0.567901120784947 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod5 state2 state2  </Instance>
+ <ProbTable> 0.432098879215053 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod6 state1 state1  </Instance>
+ <ProbTable> 0.168528520179974 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod6 state1 state2  </Instance>
+ <ProbTable> 0.831471479820026 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod6 state2 state1  </Instance>
+ <ProbTable> 0.210895293293828 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod6 state2 state2  </Instance>
+ <ProbTable> 0.789104706706172 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod6 state1 state1  </Instance>
+ <ProbTable> 0.561202019053263 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod6 state1 state2  </Instance>
+ <ProbTable> 0.438797980946737 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod6 state2 state1  </Instance>
+ <ProbTable> 0.581350757524676 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod6 state2 state2  </Instance>
+ <ProbTable> 0.418649242475324 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod6 state1 state1  </Instance>
+ <ProbTable> 0.548602179309165 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod6 state1 state2  </Instance>
+ <ProbTable> 0.451397820690835 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod6 state2 state1  </Instance>
+ <ProbTable> 0.544196725461871 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod6 state2 state2  </Instance>
+ <ProbTable> 0.455803274538129 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod6 state1 state1  </Instance>
+ <ProbTable> 0.533119817671098 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod6 state1 state2  </Instance>
+ <ProbTable> 0.466880182328902 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod6 state2 state1  </Instance>
+ <ProbTable> 0.555599766476176 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod6 state2 state2  </Instance>
+ <ProbTable> 0.444400233523824 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod7 state1 state1  </Instance>
+ <ProbTable> 0.633609599775483 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod7 state1 state2  </Instance>
+ <ProbTable> 0.366390400224517 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod7 state2 state1  </Instance>
+ <ProbTable> 0.186136570056824 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod7 state2 state2  </Instance>
+ <ProbTable> 0.813863429943176 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod7 state1 state1  </Instance>
+ <ProbTable> 0.598183226803489 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod7 state1 state2  </Instance>
+ <ProbTable> 0.401816773196511 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod7 state2 state1  </Instance>
+ <ProbTable> 0.57535715051309 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod7 state2 state2  </Instance>
+ <ProbTable> 0.42464284948691 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod7 state1 state1  </Instance>
+ <ProbTable> 0.136745507633123 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod7 state1 state2  </Instance>
+ <ProbTable> 0.863254492366877 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod7 state2 state1  </Instance>
+ <ProbTable> 0.557660306488373 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod7 state2 state2  </Instance>
+ <ProbTable> 0.442339693511627 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod7 state1 state1  </Instance>
+ <ProbTable> 0.582009561625024 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod7 state1 state2  </Instance>
+ <ProbTable> 0.417990438374976 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod7 state2 state1  </Instance>
+ <ProbTable> 0.528364175400336 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod7 state2 state2  </Instance>
+ <ProbTable> 0.471635824599664 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod8 state1 state1  </Instance>
+ <ProbTable> 0.170277374963529 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod8 state1 state2  </Instance>
+ <ProbTable> 0.829722625036471 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod8 state2 state1  </Instance>
+ <ProbTable> 0.624554489997505 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod8 state2 state2  </Instance>
+ <ProbTable> 0.375445510002495 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod8 state1 state1  </Instance>
+ <ProbTable> 0.550712351986932 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod8 state1 state2  </Instance>
+ <ProbTable> 0.449287648013068 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod8 state2 state1  </Instance>
+ <ProbTable> 0.173943834493774 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod8 state2 state2  </Instance>
+ <ProbTable> 0.826056165506226 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod8 state1 state1  </Instance>
+ <ProbTable> 0.542461084849227 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod8 state1 state2  </Instance>
+ <ProbTable> 0.457538915150773 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod8 state2 state1  </Instance>
+ <ProbTable> 0.574787937674387 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod8 state2 state2  </Instance>
+ <ProbTable> 0.425212062325613 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod8 state1 state1  </Instance>
+ <ProbTable> 0.544385925656659 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod8 state1 state2  </Instance>
+ <ProbTable> 0.455614074343341 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod8 state2 state1  </Instance>
+ <ProbTable> 0.549075206143962 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod8 state2 state2  </Instance>
+ <ProbTable> 0.450924793856038 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod9 state1 state1  </Instance>
+ <ProbTable> 0.623585505241089 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod9 state1 state2  </Instance>
+ <ProbTable> 0.376414494758911 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod9 state2 state1  </Instance>
+ <ProbTable> 0.205793112551863 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod9 state2 state2  </Instance>
+ <ProbTable> 0.794206887448137 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod9 state1 state1  </Instance>
+ <ProbTable> 0.157684736748643 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod9 state1 state2  </Instance>
+ <ProbTable> 0.842315263251357 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod9 state2 state1  </Instance>
+ <ProbTable> 0.59003175864894 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod9 state2 state2  </Instance>
+ <ProbTable> 0.40996824135106 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod9 state1 state1  </Instance>
+ <ProbTable> 0.554286170057048 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod9 state1 state2  </Instance>
+ <ProbTable> 0.445713829942952 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod9 state2 state1  </Instance>
+ <ProbTable> 0.537541069608883 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod9 state2 state2  </Instance>
+ <ProbTable> 0.462458930391117 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod9 state1 state1  </Instance>
+ <ProbTable> 0.538505501205492 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod9 state1 state2  </Instance>
+ <ProbTable> 0.461494498794508 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod9 state2 state1  </Instance>
+ <ProbTable> 0.52869685909854 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod9 state2 state2  </Instance>
+ <ProbTable> 0.47130314090146 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod10 state1 state1  </Instance>
+ <ProbTable> 0.62086938525367 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod10 state1 state2  </Instance>
+ <ProbTable> 0.37913061474633 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod10 state2 state1  </Instance>
+ <ProbTable> 0.672075141143675 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod10 state2 state2  </Instance>
+ <ProbTable> 0.327924858856325 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod10 state1 state1  </Instance>
+ <ProbTable> 0.612911965148762 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod10 state1 state2  </Instance>
+ <ProbTable> 0.387088034851238 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod10 state2 state1  </Instance>
+ <ProbTable> 0.650399103143818 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod10 state2 state2  </Instance>
+ <ProbTable> 0.349600896856182 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod10 state1 state1  </Instance>
+ <ProbTable> 0.601770533135352 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod10 state1 state2  </Instance>
+ <ProbTable> 0.398229466864648 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod10 state2 state1  </Instance>
+ <ProbTable> 0.622016974283048 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod10 state2 state2  </Instance>
+ <ProbTable> 0.377983025716952 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod10 state1 state1  </Instance>
+ <ProbTable> 0.148380727475334 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod10 state1 state2  </Instance>
+ <ProbTable> 0.851619272524666 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod10 state2 state1  </Instance>
+ <ProbTable> 0.611751466975587 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod10 state2 state2  </Instance>
+ <ProbTable> 0.388248533024413 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod11 state1 state1  </Instance>
+ <ProbTable> 0.618147836813354 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod11 state1 state2  </Instance>
+ <ProbTable> 0.381852163186646 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod11 state2 state1  </Instance>
+ <ProbTable> 0.608522974756007 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod11 state2 state2  </Instance>
+ <ProbTable> 0.391477025243993 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod11 state1 state1  </Instance>
+ <ProbTable> 0.155232812298451 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod11 state1 state2  </Instance>
+ <ProbTable> 0.844767187701549 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod11 state2 state1  </Instance>
+ <ProbTable> 0.179323728763486 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod11 state2 state2  </Instance>
+ <ProbTable> 0.820676271236514 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod11 state1 state1  </Instance>
+ <ProbTable> 0.554450004938527 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod11 state1 state2  </Instance>
+ <ProbTable> 0.445549995061473 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod11 state2 state1  </Instance>
+ <ProbTable> 0.556215886315545 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod11 state2 state2  </Instance>
+ <ProbTable> 0.443784113684455 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod11 state1 state1  </Instance>
+ <ProbTable> 0.54869247713201 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod11 state1 state2  </Instance>
+ <ProbTable> 0.45130752286799 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod11 state2 state1  </Instance>
+ <ProbTable> 0.559060092726063 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod11 state2 state2  </Instance>
+ <ProbTable> 0.440939907273937 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod12 state1 state1  </Instance>
+ <ProbTable> 0.640849845459865 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod12 state1 state2  </Instance>
+ <ProbTable> 0.359150154540135 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod12 state2 state1  </Instance>
+ <ProbTable> 0.638129722740081 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod12 state2 state2  </Instance>
+ <ProbTable> 0.361870277259919 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod12 state1 state1  </Instance>
+ <ProbTable> 0.59522418492744 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod12 state1 state2  </Instance>
+ <ProbTable> 0.40477581507256 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod12 state2 state1  </Instance>
+ <ProbTable> 0.629020341273938 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod12 state2 state2  </Instance>
+ <ProbTable> 0.370979658726062 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod12 state1 state1  </Instance>
+ <ProbTable> 0.146802336779693 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod12 state1 state2  </Instance>
+ <ProbTable> 0.853197663220307 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod12 state2 state1  </Instance>
+ <ProbTable> 0.62601816677939 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod12 state2 state2  </Instance>
+ <ProbTable> 0.37398183322061 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod12 state1 state1  </Instance>
+ <ProbTable> 0.564978174479198 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod12 state1 state2  </Instance>
+ <ProbTable> 0.435021825520802 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod12 state2 state1  </Instance>
+ <ProbTable> 0.617959691124457 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod12 state2 state2  </Instance>
+ <ProbTable> 0.382040308875543 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod13 state1 state1  </Instance>
+ <ProbTable> 0.196844185090954 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod13 state1 state2  </Instance>
+ <ProbTable> 0.803155814909046 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod13 state2 state1  </Instance>
+ <ProbTable> 0.689524844293247 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod13 state2 state2  </Instance>
+ <ProbTable> 0.310475155706753 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod13 state1 state1  </Instance>
+ <ProbTable> 0.582701848912689 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod13 state1 state2  </Instance>
+ <ProbTable> 0.417298151087311 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod13 state2 state1  </Instance>
+ <ProbTable> 0.653752730614093 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod13 state2 state2  </Instance>
+ <ProbTable> 0.346247269385907 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod13 state1 state1  </Instance>
+ <ProbTable> 0.543079926328781 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod13 state1 state2  </Instance>
+ <ProbTable> 0.456920073671219 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod13 state2 state1  </Instance>
+ <ProbTable> 0.628632037194528 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod13 state2 state2  </Instance>
+ <ProbTable> 0.371367962805472 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod13 state1 state1  </Instance>
+ <ProbTable> 0.522440213561235 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod13 state1 state2  </Instance>
+ <ProbTable> 0.477559786438765 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod13 state2 state1  </Instance>
+ <ProbTable> 0.599941518585068 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod13 state2 state2  </Instance>
+ <ProbTable> 0.400058481414932 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod14 state1 state1  </Instance>
+ <ProbTable> 0.643823178761715 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod14 state1 state2  </Instance>
+ <ProbTable> 0.356176821238285 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod14 state2 state1  </Instance>
+ <ProbTable> 0.630445051635677 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod14 state2 state2  </Instance>
+ <ProbTable> 0.369554948364323 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod14 state1 state1  </Instance>
+ <ProbTable> 0.165761495538338 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod14 state1 state2  </Instance>
+ <ProbTable> 0.834238504461662 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod14 state2 state1  </Instance>
+ <ProbTable> 0.595850333611577 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod14 state2 state2  </Instance>
+ <ProbTable> 0.404149666388423 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod14 state1 state1  </Instance>
+ <ProbTable> 0.555463872312022 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod14 state1 state2  </Instance>
+ <ProbTable> 0.444536127687978 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod14 state2 state1  </Instance>
+ <ProbTable> 0.148559929178015 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod14 state2 state2  </Instance>
+ <ProbTable> 0.851440070821985 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod14 state1 state1  </Instance>
+ <ProbTable> 0.547705030696842 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod14 state1 state2  </Instance>
+ <ProbTable> 0.452294969303158 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod14 state2 state1  </Instance>
+ <ProbTable> 0.565548034025411 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod14 state2 state2  </Instance>
+ <ProbTable> 0.434451965974589 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod15 state1 state1  </Instance>
+ <ProbTable> 0.622555529261689 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod15 state1 state2  </Instance>
+ <ProbTable> 0.377444470738311 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod15 state2 state1  </Instance>
+ <ProbTable> 0.624815330327801 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod15 state2 state2  </Instance>
+ <ProbTable> 0.375184669672199 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod15 state1 state1  </Instance>
+ <ProbTable> 0.168680494421462 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod15 state1 state2  </Instance>
+ <ProbTable> 0.831319505578538 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod15 state2 state1  </Instance>
+ <ProbTable> 0.617189328938853 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod15 state2 state2  </Instance>
+ <ProbTable> 0.382810671061147 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod15 state1 state1  </Instance>
+ <ProbTable> 0.593031888937522 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod15 state1 state2  </Instance>
+ <ProbTable> 0.406968111062478 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod15 state2 state1  </Instance>
+ <ProbTable> 0.573464168801879 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod15 state2 state2  </Instance>
+ <ProbTable> 0.426535831198121 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod15 state1 state1  </Instance>
+ <ProbTable> 0.529056170362008 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod15 state1 state2  </Instance>
+ <ProbTable> 0.470943829637992 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod15 state2 state1  </Instance>
+ <ProbTable> 0.131173062962062 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod15 state2 state2  </Instance>
+ <ProbTable> 0.868826937037938 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod16 state1 state1  </Instance>
+ <ProbTable> 0.674422047937503 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod16 state1 state2  </Instance>
+ <ProbTable> 0.325577952062497 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod16 state2 state1  </Instance>
+ <ProbTable> 0.59398422065702 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod16 state2 state2  </Instance>
+ <ProbTable> 0.40601577934298 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod16 state1 state1  </Instance>
+ <ProbTable> 0.644737468410151 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod16 state1 state2  </Instance>
+ <ProbTable> 0.355262531589849 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod16 state2 state1  </Instance>
+ <ProbTable> 0.591272351222805 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod16 state2 state2  </Instance>
+ <ProbTable> 0.408727648777195 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod16 state1 state1  </Instance>
+ <ProbTable> 0.634116405971447 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod16 state1 state2  </Instance>
+ <ProbTable> 0.365883594028553 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod16 state2 state1  </Instance>
+ <ProbTable> 0.144467092523005 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod16 state2 state2  </Instance>
+ <ProbTable> 0.855532907476995 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod16 state1 state1  </Instance>
+ <ProbTable> 0.656938361296579 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod16 state1 state2  </Instance>
+ <ProbTable> 0.343061638703421 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod16 state2 state1  </Instance>
+ <ProbTable> 0.571664762052716 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod16 state2 state2  </Instance>
+ <ProbTable> 0.428335237947284 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod17 state1 state1  </Instance>
+ <ProbTable> 0.625367888963154 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod17 state1 state2  </Instance>
+ <ProbTable> 0.374632111036846 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod17 state2 state1  </Instance>
+ <ProbTable> 0.606167604449224 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod17 state2 state2  </Instance>
+ <ProbTable> 0.393832395550776 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod17 state1 state1  </Instance>
+ <ProbTable> 0.596437925738948 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod17 state1 state2  </Instance>
+ <ProbTable> 0.403562074261052 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod17 state2 state1  </Instance>
+ <ProbTable> 0.568517335308526 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod17 state2 state2  </Instance>
+ <ProbTable> 0.431482664691474 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod17 state1 state1  </Instance>
+ <ProbTable> 0.606286245968421 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod17 state1 state2  </Instance>
+ <ProbTable> 0.393713754031579 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod17 state2 state1  </Instance>
+ <ProbTable> 0.138631573551315 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod17 state2 state2  </Instance>
+ <ProbTable> 0.861368426448685 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod17 state1 state1  </Instance>
+ <ProbTable> 0.140395841592619 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod17 state1 state2  </Instance>
+ <ProbTable> 0.859604158407381 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod17 state2 state1  </Instance>
+ <ProbTable> 0.545989710188528 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod17 state2 state2  </Instance>
+ <ProbTable> 0.454010289811472 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod18 state1 state1  </Instance>
+ <ProbTable> 0.183843802288082 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod18 state1 state2  </Instance>
+ <ProbTable> 0.816156197711918 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod18 state2 state1  </Instance>
+ <ProbTable> 0.633383903883409 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod18 state2 state2  </Instance>
+ <ProbTable> 0.366616096116591 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod18 state1 state1  </Instance>
+ <ProbTable> 0.56489410326644 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod18 state1 state2  </Instance>
+ <ProbTable> 0.43510589673356 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod18 state2 state1  </Instance>
+ <ProbTable> 0.609843690700507 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod18 state2 state2  </Instance>
+ <ProbTable> 0.390156309299493 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod18 state1 state1  </Instance>
+ <ProbTable> 0.525699366873249 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod18 state1 state2  </Instance>
+ <ProbTable> 0.474300633126751 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod18 state2 state1  </Instance>
+ <ProbTable> 0.148721851694081 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod18 state2 state2  </Instance>
+ <ProbTable> 0.851278148305919 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod18 state1 state1  </Instance>
+ <ProbTable> 0.52834485317062 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod18 state1 state2  </Instance>
+ <ProbTable> 0.47165514682938 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod18 state2 state1  </Instance>
+ <ProbTable> 0.553481838545553 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod18 state2 state2  </Instance>
+ <ProbTable> 0.446518161454447 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod19 state1 state1  </Instance>
+ <ProbTable> 0.180330837941606 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod19 state1 state2  </Instance>
+ <ProbTable> 0.819669162058394 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod19 state2 state1  </Instance>
+ <ProbTable> 0.68833693694707 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod19 state2 state2  </Instance>
+ <ProbTable> 0.31166306305293 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod19 state1 state1  </Instance>
+ <ProbTable> 0.568331387098914 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod19 state1 state2  </Instance>
+ <ProbTable> 0.431668612901086 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod19 state2 state1  </Instance>
+ <ProbTable> 0.634528688141162 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod19 state2 state2  </Instance>
+ <ProbTable> 0.365471311858838 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod19 state1 state1  </Instance>
+ <ProbTable> 0.511026790971634 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod19 state1 state2  </Instance>
+ <ProbTable> 0.488973209028366 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod19 state2 state1  </Instance>
+ <ProbTable> 0.592795600761461 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod19 state2 state2  </Instance>
+ <ProbTable> 0.407204399238539 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod19 state1 state1  </Instance>
+ <ProbTable> 0.533450976177206 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod19 state1 state2  </Instance>
+ <ProbTable> 0.466549023822794 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod19 state2 state1  </Instance>
+ <ProbTable> 0.577616047858843 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod19 state2 state2  </Instance>
+ <ProbTable> 0.422383952141157 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod20 state1 state1  </Instance>
+ <ProbTable> 0.634630419009984 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod20 state1 state2  </Instance>
+ <ProbTable> 0.365369580990016 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod20 state2 state1  </Instance>
+ <ProbTable> 0.661906922804832 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod20 state2 state2  </Instance>
+ <ProbTable> 0.338093077195168 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod20 state1 state1  </Instance>
+ <ProbTable> 0.178280251832921 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod20 state1 state2  </Instance>
+ <ProbTable> 0.821719748167079 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod20 state2 state1  </Instance>
+ <ProbTable> 0.639438410017654 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod20 state2 state2  </Instance>
+ <ProbTable> 0.360561589982346 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod20 state1 state1  </Instance>
+ <ProbTable> 0.581728485542641 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod20 state1 state2  </Instance>
+ <ProbTable> 0.418271514457359 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod20 state2 state1  </Instance>
+ <ProbTable> 0.616052436884066 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod20 state2 state2  </Instance>
+ <ProbTable> 0.383947563115934 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod20 state1 state1  </Instance>
+ <ProbTable> 0.528661106915732 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod20 state1 state2  </Instance>
+ <ProbTable> 0.471338893084268 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod20 state2 state1  </Instance>
+ <ProbTable> 0.620958250167047 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod20 state2 state2  </Instance>
+ <ProbTable> 0.379041749832953 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod21 state1 state1  </Instance>
+ <ProbTable> 0.638400070001693 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod21 state1 state2  </Instance>
+ <ProbTable> 0.361599929998307 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod21 state2 state1  </Instance>
+ <ProbTable> 0.605000483114477 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod21 state2 state2  </Instance>
+ <ProbTable> 0.394999516885523 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod21 state1 state1  </Instance>
+ <ProbTable> 0.621609886417769 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod21 state1 state2  </Instance>
+ <ProbTable> 0.378390113582231 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod21 state2 state1  </Instance>
+ <ProbTable> 0.162798390728158 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod21 state2 state2  </Instance>
+ <ProbTable> 0.837201609271842 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod21 state1 state1  </Instance>
+ <ProbTable> 0.597103995202935 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod21 state1 state2  </Instance>
+ <ProbTable> 0.402896004797065 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod21 state2 state1  </Instance>
+ <ProbTable> 0.574115440753177 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod21 state2 state2  </Instance>
+ <ProbTable> 0.425884559246823 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod21 state1 state1  </Instance>
+ <ProbTable> 0.146408043541131 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod21 state1 state2  </Instance>
+ <ProbTable> 0.853591956458869 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod21 state2 state1  </Instance>
+ <ProbTable> 0.553676934010765 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod21 state2 state2  </Instance>
+ <ProbTable> 0.446323065989235 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod22 state1 state1  </Instance>
+ <ProbTable> 0.703145312475972 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod22 state1 state2  </Instance>
+ <ProbTable> 0.296854687524028 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod22 state2 state1  </Instance>
+ <ProbTable> 0.652775358348153 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod22 state2 state2  </Instance>
+ <ProbTable> 0.347224641651847 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod22 state1 state1  </Instance>
+ <ProbTable> 0.682779000666924 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod22 state1 state2  </Instance>
+ <ProbTable> 0.317220999333076 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod22 state2 state1  </Instance>
+ <ProbTable> 0.617143757692538 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod22 state2 state2  </Instance>
+ <ProbTable> 0.382856242307462 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod22 state1 state1  </Instance>
+ <ProbTable> 0.685076669445261 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod22 state1 state2  </Instance>
+ <ProbTable> 0.314923330554739 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod22 state2 state1  </Instance>
+ <ProbTable> 0.61112831428647 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod22 state2 state2  </Instance>
+ <ProbTable> 0.38887168571353 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod22 state1 state1  </Instance>
+ <ProbTable> 0.607394105959684 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod22 state1 state2  </Instance>
+ <ProbTable> 0.392605894040316 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod22 state2 state1  </Instance>
+ <ProbTable> 0.642447270802222 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod22 state2 state2  </Instance>
+ <ProbTable> 0.357552729197778 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod23 state1 state1  </Instance>
+ <ProbTable> 0.66463773633347 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod23 state1 state2  </Instance>
+ <ProbTable> 0.33536226366653 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod23 state2 state1  </Instance>
+ <ProbTable> 0.647321410150242 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod23 state2 state2  </Instance>
+ <ProbTable> 0.352678589849758 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod23 state1 state1  </Instance>
+ <ProbTable> 0.645505286689388 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod23 state1 state2  </Instance>
+ <ProbTable> 0.354494713310612 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod23 state2 state1  </Instance>
+ <ProbTable> 0.577821565803128 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod23 state2 state2  </Instance>
+ <ProbTable> 0.422178434196872 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod23 state1 state1  </Instance>
+ <ProbTable> 0.602051533691662 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod23 state1 state2  </Instance>
+ <ProbTable> 0.397948466308338 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod23 state2 state1  </Instance>
+ <ProbTable> 0.579225695124279 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod23 state2 state2  </Instance>
+ <ProbTable> 0.420774304875721 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod23 state1 state1  </Instance>
+ <ProbTable> 0.6185872855306 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod23 state1 state2  </Instance>
+ <ProbTable> 0.3814127144694 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod23 state2 state1  </Instance>
+ <ProbTable> 0.120082749744354 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod23 state2 state2  </Instance>
+ <ProbTable> 0.879917250255646 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod24 state1 state1  </Instance>
+ <ProbTable> 0.680801862180132 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod24 state1 state2  </Instance>
+ <ProbTable> 0.319198137819868 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod24 state2 state1  </Instance>
+ <ProbTable> 0.628702912411308 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod24 state2 state2  </Instance>
+ <ProbTable> 0.371297087588692 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod24 state1 state1  </Instance>
+ <ProbTable> 0.637507948525878 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod24 state1 state2  </Instance>
+ <ProbTable> 0.362492051474122 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod24 state2 state1  </Instance>
+ <ProbTable> 0.583929415038058 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod24 state2 state2  </Instance>
+ <ProbTable> 0.416070584961942 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod24 state1 state1  </Instance>
+ <ProbTable> 0.649192660950813 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod24 state1 state2  </Instance>
+ <ProbTable> 0.350807339049187 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod24 state2 state1  </Instance>
+ <ProbTable> 0.588794243372673 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod24 state2 state2  </Instance>
+ <ProbTable> 0.411205756627327 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod24 state1 state1  </Instance>
+ <ProbTable> 0.608827173590923 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod24 state1 state2  </Instance>
+ <ProbTable> 0.391172826409077 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod24 state2 state1  </Instance>
+ <ProbTable> 0.557346295950043 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod24 state2 state2  </Instance>
+ <ProbTable> 0.442653704049957 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod25 state1 state1  </Instance>
+ <ProbTable> 0.633200997889687 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod25 state1 state2  </Instance>
+ <ProbTable> 0.366799002110313 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod25 state2 state1  </Instance>
+ <ProbTable> 0.194416815141897 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod25 state2 state2  </Instance>
+ <ProbTable> 0.805583184858103 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod25 state1 state1  </Instance>
+ <ProbTable> 0.591489822379389 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod25 state1 state2  </Instance>
+ <ProbTable> 0.408510177620611 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod25 state2 state1  </Instance>
+ <ProbTable> 0.570037038263001 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod25 state2 state2  </Instance>
+ <ProbTable> 0.429962961736999 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod25 state1 state1  </Instance>
+ <ProbTable> 0.572940960566267 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod25 state1 state2  </Instance>
+ <ProbTable> 0.427059039433733 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod25 state2 state1  </Instance>
+ <ProbTable> 0.561014434487885 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod25 state2 state2  </Instance>
+ <ProbTable> 0.438985565512115 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod25 state1 state1  </Instance>
+ <ProbTable> 0.139231624405107 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod25 state1 state2  </Instance>
+ <ProbTable> 0.860768375594893 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod25 state2 state1  </Instance>
+ <ProbTable> 0.541724526980577 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod25 state2 state2  </Instance>
+ <ProbTable> 0.458275473019423 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod26 state1 state1  </Instance>
+ <ProbTable> 0.182287591019755 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod26 state1 state2  </Instance>
+ <ProbTable> 0.817712408980245 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod26 state2 state1  </Instance>
+ <ProbTable> 0.643952130285256 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod26 state2 state2  </Instance>
+ <ProbTable> 0.356047869714744 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod26 state1 state1  </Instance>
+ <ProbTable> 0.54908333621207 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod26 state1 state2  </Instance>
+ <ProbTable> 0.45091666378793 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod26 state2 state1  </Instance>
+ <ProbTable> 0.616578643800253 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod26 state2 state2  </Instance>
+ <ProbTable> 0.383421356199747 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod26 state1 state1  </Instance>
+ <ProbTable> 0.553616715560065 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod26 state1 state2  </Instance>
+ <ProbTable> 0.446383284439935 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod26 state2 state1  </Instance>
+ <ProbTable> 0.572097115587881 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod26 state2 state2  </Instance>
+ <ProbTable> 0.427902884412119 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod26 state1 state1  </Instance>
+ <ProbTable> 0.549440910867689 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod26 state1 state2  </Instance>
+ <ProbTable> 0.450559089132311 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod26 state2 state1  </Instance>
+ <ProbTable> 0.147639247569639 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod26 state2 state2  </Instance>
+ <ProbTable> 0.852360752430361 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod27 state1 state1  </Instance>
+ <ProbTable> 0.654421058035933 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod27 state1 state2  </Instance>
+ <ProbTable> 0.345578941964067 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod27 state2 state1  </Instance>
+ <ProbTable> 0.638108394828784 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod27 state2 state2  </Instance>
+ <ProbTable> 0.361891605171216 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod27 state1 state1  </Instance>
+ <ProbTable> 0.628900650791006 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod27 state1 state2  </Instance>
+ <ProbTable> 0.371099349208994 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod27 state2 state1  </Instance>
+ <ProbTable> 0.590600476151605 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod27 state2 state2  </Instance>
+ <ProbTable> 0.409399523848395 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod27 state1 state1  </Instance>
+ <ProbTable> 0.58449695745324 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod27 state1 state2  </Instance>
+ <ProbTable> 0.41550304254676 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod27 state2 state1  </Instance>
+ <ProbTable> 0.577462603156341 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod27 state2 state2  </Instance>
+ <ProbTable> 0.422537396843659 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod27 state1 state1  </Instance>
+ <ProbTable> 0.158984477314871 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod27 state1 state2  </Instance>
+ <ProbTable> 0.841015522685129 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod27 state2 state1  </Instance>
+ <ProbTable> 0.139133970551874 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod27 state2 state2  </Instance>
+ <ProbTable> 0.860866029448126 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod28 state1 state1  </Instance>
+ <ProbTable> 0.62535542851632 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod28 state1 state2  </Instance>
+ <ProbTable> 0.37464457148368 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod28 state2 state1  </Instance>
+ <ProbTable> 0.678914932752732 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod28 state2 state2  </Instance>
+ <ProbTable> 0.321085067247268 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod28 state1 state1  </Instance>
+ <ProbTable> 0.641402464297532 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod28 state1 state2  </Instance>
+ <ProbTable> 0.358597535702468 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod28 state2 state1  </Instance>
+ <ProbTable> 0.621870060857363 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod28 state2 state2  </Instance>
+ <ProbTable> 0.378129939142637 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod28 state1 state1  </Instance>
+ <ProbTable> 0.575565242253971 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod28 state1 state2  </Instance>
+ <ProbTable> 0.424434757746029 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod28 state2 state1  </Instance>
+ <ProbTable> 0.605578142453962 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod28 state2 state2  </Instance>
+ <ProbTable> 0.394421857546038 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod28 state1 state1  </Instance>
+ <ProbTable> 0.154989785844142 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod28 state1 state2  </Instance>
+ <ProbTable> 0.845010214155858 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod28 state2 state1  </Instance>
+ <ProbTable> 0.639955400122988 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod28 state2 state2  </Instance>
+ <ProbTable> 0.360044599877012 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod29 state1 state1  </Instance>
+ <ProbTable> 0.695281432286473 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod29 state1 state2  </Instance>
+ <ProbTable> 0.304718567713527 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod29 state2 state1  </Instance>
+ <ProbTable> 0.672016799887958 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod29 state2 state2  </Instance>
+ <ProbTable> 0.327983200112042 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod29 state1 state1  </Instance>
+ <ProbTable> 0.658660882716935 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod29 state1 state2  </Instance>
+ <ProbTable> 0.341339117283065 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod29 state2 state1  </Instance>
+ <ProbTable> 0.59805944062359 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod29 state2 state2  </Instance>
+ <ProbTable> 0.40194055937641 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod29 state1 state1  </Instance>
+ <ProbTable> 0.64154900435232 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod29 state1 state2  </Instance>
+ <ProbTable> 0.35845099564768 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod29 state2 state1  </Instance>
+ <ProbTable> 0.603725162461021 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod29 state2 state2  </Instance>
+ <ProbTable> 0.396274837538979 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod29 state1 state1  </Instance>
+ <ProbTable> 0.624869474612366 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod29 state1 state2  </Instance>
+ <ProbTable> 0.375130525387634 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod29 state2 state1  </Instance>
+ <ProbTable> 0.632155983945576 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod29 state2 state2  </Instance>
+ <ProbTable> 0.367844016054424 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod30 state1 state1  </Instance>
+ <ProbTable> 0.608076237181423 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod30 state1 state2  </Instance>
+ <ProbTable> 0.391923762818577 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod30 state2 state1  </Instance>
+ <ProbTable> 0.671771600780813 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod30 state2 state2  </Instance>
+ <ProbTable> 0.328228399219187 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod30 state1 state1  </Instance>
+ <ProbTable> 0.16392089086521 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod30 state1 state2  </Instance>
+ <ProbTable> 0.83607910913479 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod30 state2 state1  </Instance>
+ <ProbTable> 0.62582757944862 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod30 state2 state2  </Instance>
+ <ProbTable> 0.37417242055138 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod30 state1 state1  </Instance>
+ <ProbTable> 0.543439233048338 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod30 state1 state2  </Instance>
+ <ProbTable> 0.456560766951662 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod30 state2 state1  </Instance>
+ <ProbTable> 0.581065494722376 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod30 state2 state2  </Instance>
+ <ProbTable> 0.418934505277624 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod30 state1 state1  </Instance>
+ <ProbTable> 0.577338131613494 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod30 state1 state2  </Instance>
+ <ProbTable> 0.422661868386506 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod30 state2 state1  </Instance>
+ <ProbTable> 0.600226903360839 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod30 state2 state2  </Instance>
+ <ProbTable> 0.399773096639161 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod31 state1 state1  </Instance>
+ <ProbTable> 0.67750586773501 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod31 state1 state2  </Instance>
+ <ProbTable> 0.32249413226499 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod31 state2 state1  </Instance>
+ <ProbTable> 0.204613708612768 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod31 state2 state2  </Instance>
+ <ProbTable> 0.795386291387232 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod31 state1 state1  </Instance>
+ <ProbTable> 0.645134871881366 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod31 state1 state2  </Instance>
+ <ProbTable> 0.354865128118634 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod31 state2 state1  </Instance>
+ <ProbTable> 0.572205440865788 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod31 state2 state2  </Instance>
+ <ProbTable> 0.427794559134212 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod31 state1 state1  </Instance>
+ <ProbTable> 0.622408479102515 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod31 state1 state2  </Instance>
+ <ProbTable> 0.377591520897485 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod31 state2 state1  </Instance>
+ <ProbTable> 0.554295219356765 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod31 state2 state2  </Instance>
+ <ProbTable> 0.445704780643235 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod31 state1 state1  </Instance>
+ <ProbTable> 0.59479494950624 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod31 state1 state2  </Instance>
+ <ProbTable> 0.40520505049376 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod31 state2 state1  </Instance>
+ <ProbTable> 0.543449580160597 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod31 state2 state2  </Instance>
+ <ProbTable> 0.456550419839403 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod32 state1 state1  </Instance>
+ <ProbTable> 0.659849891681132 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod32 state1 state2  </Instance>
+ <ProbTable> 0.340150108318868 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod32 state2 state1  </Instance>
+ <ProbTable> 0.68413684143233 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod32 state2 state2  </Instance>
+ <ProbTable> 0.31586315856767 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod32 state1 state1  </Instance>
+ <ProbTable> 0.62013394228819 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod32 state1 state2  </Instance>
+ <ProbTable> 0.37986605771181 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod32 state2 state1  </Instance>
+ <ProbTable> 0.639150797726015 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod32 state2 state2  </Instance>
+ <ProbTable> 0.360849202273985 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod32 state1 state1  </Instance>
+ <ProbTable> 0.169094341500469 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod32 state1 state2  </Instance>
+ <ProbTable> 0.830905658499531 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod32 state2 state1  </Instance>
+ <ProbTable> 0.591724778756057 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod32 state2 state2  </Instance>
+ <ProbTable> 0.408275221243943 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod32 state1 state1  </Instance>
+ <ProbTable> 0.584785212847948 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod32 state1 state2  </Instance>
+ <ProbTable> 0.415214787152052 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod32 state2 state1  </Instance>
+ <ProbTable> 0.608004464189255 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod32 state2 state2  </Instance>
+ <ProbTable> 0.391995535810745 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod33 state1 state1  </Instance>
+ <ProbTable> 0.653159064258 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod33 state1 state2  </Instance>
+ <ProbTable> 0.346840935742 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod33 state2 state1  </Instance>
+ <ProbTable> 0.627606280391639 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod33 state2 state2  </Instance>
+ <ProbTable> 0.372393719608361 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod33 state1 state1  </Instance>
+ <ProbTable> 0.702311627985047 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod33 state1 state2  </Instance>
+ <ProbTable> 0.297688372014953 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod33 state2 state1  </Instance>
+ <ProbTable> 0.613236805083472 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod33 state2 state2  </Instance>
+ <ProbTable> 0.386763194916528 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod33 state1 state1  </Instance>
+ <ProbTable> 0.634584224209431 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod33 state1 state2  </Instance>
+ <ProbTable> 0.365415775790569 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod33 state2 state1  </Instance>
+ <ProbTable> 0.552421200347857 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod33 state2 state2  </Instance>
+ <ProbTable> 0.447578799652143 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod33 state1 state1  </Instance>
+ <ProbTable> 0.614641318550437 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod33 state1 state2  </Instance>
+ <ProbTable> 0.385358681449563 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod33 state2 state1  </Instance>
+ <ProbTable> 0.120812559358051 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod33 state2 state2  </Instance>
+ <ProbTable> 0.879187440641949 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod34 state1 state1  </Instance>
+ <ProbTable> 0.658809040102941 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod34 state1 state2  </Instance>
+ <ProbTable> 0.341190959897059 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod34 state2 state1  </Instance>
+ <ProbTable> 0.610298839748467 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod34 state2 state2  </Instance>
+ <ProbTable> 0.389701160251533 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod34 state1 state1  </Instance>
+ <ProbTable> 0.630073948496153 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod34 state1 state2  </Instance>
+ <ProbTable> 0.369926051503847 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod34 state2 state1  </Instance>
+ <ProbTable> 0.157160306892668 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod34 state2 state2  </Instance>
+ <ProbTable> 0.842839693107332 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod34 state1 state1  </Instance>
+ <ProbTable> 0.616595678283678 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod34 state1 state2  </Instance>
+ <ProbTable> 0.383404321716322 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod34 state2 state1  </Instance>
+ <ProbTable> 0.588704709759137 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod34 state2 state2  </Instance>
+ <ProbTable> 0.411295290240863 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod34 state1 state1  </Instance>
+ <ProbTable> 0.609413110730179 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod34 state1 state2  </Instance>
+ <ProbTable> 0.390586889269821 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod34 state2 state1  </Instance>
+ <ProbTable> 0.551713826376587 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod34 state2 state2  </Instance>
+ <ProbTable> 0.448286173623413 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod35 state1 state1  </Instance>
+ <ProbTable> 0.620193943876645 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod35 state1 state2  </Instance>
+ <ProbTable> 0.379806056123355 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod35 state2 state1  </Instance>
+ <ProbTable> 0.630241031532505 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod35 state2 state2  </Instance>
+ <ProbTable> 0.369758968467495 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod35 state1 state1  </Instance>
+ <ProbTable> 0.617330255021122 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod35 state1 state2  </Instance>
+ <ProbTable> 0.382669744978878 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod35 state2 state1  </Instance>
+ <ProbTable> 0.622468853356801 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod35 state2 state2  </Instance>
+ <ProbTable> 0.377531146643199 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod35 state1 state1  </Instance>
+ <ProbTable> 0.147889198804977 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod35 state1 state2  </Instance>
+ <ProbTable> 0.852110801195023 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod35 state2 state1  </Instance>
+ <ProbTable> 0.552684961229234 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod35 state2 state2  </Instance>
+ <ProbTable> 0.447315038770766 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod35 state1 state1  </Instance>
+ <ProbTable> 0.5520388351379 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod35 state1 state2  </Instance>
+ <ProbTable> 0.4479611648621 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod35 state2 state1  </Instance>
+ <ProbTable> 0.141800105245327 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod35 state2 state2  </Instance>
+ <ProbTable> 0.858199894754673 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod36 state1 state1  </Instance>
+ <ProbTable> 0.650688522579816 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod36 state1 state2  </Instance>
+ <ProbTable> 0.349311477420184 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod36 state2 state1  </Instance>
+ <ProbTable> 0.166738831636571 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action1 mod36 state2 state2  </Instance>
+ <ProbTable> 0.833261168363429 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod36 state1 state1  </Instance>
+ <ProbTable> 0.622884409493307 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod36 state1 state2  </Instance>
+ <ProbTable> 0.377115590506693 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod36 state2 state1  </Instance>
+ <ProbTable> 0.563119818210869 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action2 mod36 state2 state2  </Instance>
+ <ProbTable> 0.436880181789131 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod36 state1 state1  </Instance>
+ <ProbTable> 0.647739785885486 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod36 state1 state2  </Instance>
+ <ProbTable> 0.352260214114514 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod36 state2 state1  </Instance>
+ <ProbTable> 0.568901711833203 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action3 mod36 state2 state2  </Instance>
+ <ProbTable> 0.431098288166797 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod36 state1 state1  </Instance>
+ <ProbTable> 0.616596459394384 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod36 state1 state2  </Instance>
+ <ProbTable> 0.383403540605616 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod36 state2 state1  </Instance>
+ <ProbTable> 0.519504264843913 </ProbTable>
+ </Entry>
+ <Entry>
+ <Instance> action4 mod36 state2 state2  </Instance>
+ <ProbTable> 0.480495735156087 </ProbTable>
+ </Entry>
+ </Parameter>
+ </CondProb>
+
+ <CondProb>
+ <Var>hidden_1</Var>
+ <Parent>hidden_0</Parent>
+ <Parameter type="TBL">
+ <Entry>
+<Instance> - - </Instance>
+ <ProbTable>identity</ProbTable>
+ </Entry>
+ </Parameter>
+ </CondProb>
+
+ </StateTransitionFunction>
+
+
+<ObsFunction>
+
+ <CondProb>
+ <Var>obs</Var>
+ <Parent>hidden_1</Parent>
+ <Parameter type="TBL">
+ <Entry>
+<Instance> mod1 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod2 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod3 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod4 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod5 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod6 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod7 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod8 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod9 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod10 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod11 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod12 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod13 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod14 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod15 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod16 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod17 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod18 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod19 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod20 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod21 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod22 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod23 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod24 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod25 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod26 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod27 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod28 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod29 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod30 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod31 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod32 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod33 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod34 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod35 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ <Entry>
+<Instance> mod36 o</Instance>
+<ProbTable>1</ProbTable>
+</Entry>
+ </Parameter>
+</CondProb>
+</ObsFunction>
+
+
+<RewardFunction>
+<Func>
+<Var>reward_agent</Var>
+<Parent>action_control species_0</Parent>
+<Parameter type="TBL">
+ <Entry>
+<Instance> - - </Instance>
+<ValueTable>0 20 -5 15 -5 15 -5 15</ValueTable>
+</Entry>
+ </Parameter>
+
+  </Func>
+
+  </RewardFunction>
+
+
+</pomdpx>

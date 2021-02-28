@@ -1,0 +1,3 @@
+"","perf_mean_Tmax","perf_sd_Tmax","perf_mean_inf","perf_sd_inf","inst_mean_Tmax","inst_sd_Tmax","inst_mean_inf","inst_sd_inf"
+"MC-UAMS",0.135884230383247,0.0262967784267694,0.120360995613069,0.0163378666210039,0,0,0.078462625754199,0.0167403891040441
+"PUBD",0.130332940470456,0.0264168319622625,NA,NA,0,0,NA,NA
