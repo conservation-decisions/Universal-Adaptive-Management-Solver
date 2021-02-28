@@ -1,7 +1,11 @@
-This folder contains the code of the paper A universal 2-staten-action adaptive management solver
+This repo contains the code of the paper A universal 2-staten-action adaptive management solver
+
 REQUIREMENTS:
-This code is implemented in R and calls external packages. Users need to make sure that their version of R is (Vxx) and the packages MDPtoolbox and data.table are installed. 
-Our package uses SARSOP (https://github.com/AdaCompNUS/sarsop ).
+
+This code is implemented in R and calls external packages. Users need to make sure that their version of R is 4.0.2 and the packages MDPtoolbox and data.table are installed. 
+
+Our package uses SARSOP (https://github.com/AdaCompNUS/sarsop ), which also needs to be priorly installed.
+
 
 HOW TO?
 * Build a hmMDP using MC-UAMS:
